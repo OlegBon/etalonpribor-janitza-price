@@ -31,6 +31,7 @@ Display device pricing, availability, and last updated date on product pages bas
   - `url`
   - `price`
   - `availability`
+  - `kod1c: artikul`
   - `updated`
 
 - device-init.js finds the matching device based on window.location.pathname and fills the #device-info HTML block.
@@ -42,6 +43,7 @@ Display device pricing, availability, and last updated date on product pages bas
 <div id="device-info">
   <p>
     Price: <span id="price"></span> ₴ on <span id="updated"></span><br />
+    Artikul: <span id="kod1c"></span><br />
     <span id="availability"></span>
   </p>
 </div>
