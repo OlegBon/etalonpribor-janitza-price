@@ -1,0 +1,54 @@
+/*
+Theme Name: Тема Janitza Etalonpribor
+Template: customizr
+
+Theme URI:
+Description: Дочерняя тема для темы Customizr
+Version: 1.0.0
+Author: janitza-etalonpribor
+Author URI:
+*/
+
+/* импортируем стили родительской темы */
+@import url("../customizr/style.css");
+
+/* Свои дополнительные стили */
+
+#main-wrapper,
+#content {
+  padding-bottom: 0em;
+}
+
+/* Start Color Header */
+
+.header-skin-light [class*="nav__menu"] .nav__link,
+.header-skin-light
+  [class*="nav__menu"]
+  .nav__link-wrapper
+  .caret__dropdown-toggler {
+  color: #078f04;
+}
+
+.header-skin-light [class*="nav__menu"] .dropdown-item .nav__link {
+  color: #078f04;
+}
+
+/* End Color Header */
+
+label {
+  letter-spacing: 0px;
+}
+
+/* Pribor price */
+#device-info p {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+}
+
+#device-info #price,
+#device-info #availability {
+  font-weight: bold;
+  color: #078f04;
+}
