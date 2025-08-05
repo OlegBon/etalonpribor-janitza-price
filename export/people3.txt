@@ -1,0 +1,2 @@
+'/home/pribor/etalonpribor.com.ua/janitza/export/import.xml'
+'/home/pribor/etalonpribor.com.ua/janitza/export/offers.xml'

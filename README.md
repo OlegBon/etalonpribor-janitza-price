@@ -15,6 +15,7 @@ code-for-price/
 │   │           └── device-init.js
 │   └── uploads/
 │       └── _data-pribor.js
+├── export/
 └── README.md
 ```
 
@@ -73,6 +74,44 @@ If you’re not using a child theme:
 - Localization via locale integration with Polylang
 - Fallback UI if product not found
 - Preloader animation while data
+
+## 🧾 Integration with 1C
+
+Product data is sourced from the 1C system and loaded into WordPress via a JavaScript array called `deviceData`, defined in the `_data-pribor.js` file. This allows for dynamic updates of pricing, availability, and product codes without modifying WordPress admin content.
+
+### 📥 1C Data Format - dir export
+
+```js
+deviceData = [
+  {
+    locale: "uk",
+    name: "UMG 96-S2",
+    url: "/umg-96-s2/",
+    price: 16314,
+    availability: "Є в наявності",
+    updated: "2025-08-05",
+    kod1c: 15617,
+  },
+  ...
+];
+```
+
+Each object includes:
+
+- `locale`: Page language
+- `name`: Device name
+- `url`: Product page path
+- `price`: Price from 1C
+- `availability`: Stock status
+- `updated`: Last updated date
+- `kod1c`: Unique article code from 1C
+
+### 🔗 Automatic Updates
+
+- `_data-pribor.js` can be generated or synced via API/export from 1C.
+- `device-init.js` runs on the frontend, matches the product based on `window.location.pathname`, and updates the `#device-info` block dynamically.
+
+> This decouples pricing logic from WordPress, ensuring content stays current while keeping the admin interface clean.
 
 ## Autor
 
